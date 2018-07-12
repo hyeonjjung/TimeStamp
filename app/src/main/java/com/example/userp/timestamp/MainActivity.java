@@ -3,6 +3,7 @@ package com.example.userp.timestamp;
 import android.app.ListActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private Button startBtn;
     private Button stopBtn;
 
+    private ArrayList<ListviewItem> data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,13 +28,30 @@ public class MainActivity extends AppCompatActivity {
         stopBtn = (Button) findViewById(R.id.StopBtn);
 
 
-        ArrayList<ListviewItem> data = new ArrayList<>();
+        data = new ArrayList<>();
 
         ListviewItem sample = new ListviewItem(String.valueOf(new Date(System.currentTimeMillis())), "Start");
 
-        ListViewAdapter adapter = new ListViewAdapter(this, R.layout.listview_item, data);
+        final ListViewAdapter adapter = new ListViewAdapter(this, R.layout.listview_item, data);
         listView.setAdapter(adapter);
 
         data.add(sample);
+
+        startBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String date = String.valueOf(new Date(System.currentTimeMillis()));
+                data.add(new ListviewItem(date, "Start"));
+                adapter.notifyDataSetChanged();
+            }
+        });
+        stopBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String date = String.valueOf(new Date(System.currentTimeMillis()));
+                data.add(new ListviewItem(date, "Stop"));
+                adapter.notifyDataSetChanged();
+            }
+        });
     }
 }
