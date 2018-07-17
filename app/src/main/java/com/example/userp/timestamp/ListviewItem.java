@@ -7,10 +7,12 @@ package com.example.userp.timestamp;
 public class ListviewItem {
     private String time;
     private String situation;
+    private String speed;
 
-    public ListviewItem(String time, String situation) {
+    public ListviewItem(String time, String speed,String situation) {
         this.time = time;
         this.situation = situation;
+        this.speed  = speed;
     }
 
     public String getTime() {
@@ -27,5 +29,13 @@ public class ListviewItem {
 
     public void setSituation(String situation) {
         this.situation = situation;
+    }
+
+    public String getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(String speed) {
+        this.speed = speed;
     }
 }

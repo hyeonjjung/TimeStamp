@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 /**
@@ -47,9 +49,11 @@ public class ListViewAdapter extends BaseAdapter {
 
         TextView time = (TextView) view.findViewById(R.id.textView);
         TextView situation = (TextView) view.findViewById(R.id.textView2);
+        TextView speed  = (TextView) view.findViewById(R.id.speedTextView);
 
         time.setText(data.get(i).getTime());
         situation.setText(data.get(i).getSituation());
+        speed.setText(data.get(i).getSpeed());
 
         return view;
     }

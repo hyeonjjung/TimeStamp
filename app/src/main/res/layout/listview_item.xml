@@ -11,13 +11,21 @@
         android:layout_alignParentLeft="true"
         android:text="Current system Time"
  />
+    <TextView
+        android:id="@+id/speedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@id/textView"
+        android:text="Current speed"
+        />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:layout_toRightOf="@id/textView"
+        android:layout_toRightOf="@id/speedTextView"
         android:layout_alignParentRight="true"
         android:text="Current situation" />
 </RelativeLayout>
