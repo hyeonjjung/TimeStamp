@@ -33,8 +33,9 @@
                 android:id="@+id/pauseBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="30dp"
                 android:layout_weight="1"
-                android:text="Pause" />
+                android:text="Driving paused" />
         </LinearLayout>
 
 
@@ -52,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="30dp"
                 android:text="Start" />
 
             <Button
@@ -59,6 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="30dp"
                 android:text="Stop" />
         </LinearLayout>
     </LinearLayout>

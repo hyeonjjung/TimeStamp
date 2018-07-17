@@ -7,6 +7,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:layout_margin="5dp"
         android:layout_alignParentLeft="true"
         android:text="Current system Time"
@@ -16,6 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:textSize="20dp"
         android:layout_toRightOf="@id/textView"
         android:text="Current speed"
         />
@@ -25,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:textSize="20dp"
         android:layout_toRightOf="@id/speedTextView"
         android:layout_alignParentRight="true"
         android:text="Current situation" />
